@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mandelbrot Renderer</title>
+    <link rel="stylesheet" href="static/styles.css">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+</head>
+<body>
+    <input type="checkbox" id="menuToggle" class="menuToggle">
+    <div class="panel", id="panel", onclick="zoomOverlay.style.display = 'none';" onmouseenter="zoomOverlay.style.display = 'none';" onmouseleave="zoomOverlay.style.display = 'block';">
+        <input class="toggle top" type="checkbox" id="mandelJuliaSelector" onclick="JULIA = !JULIA; go(); updateSmall();" >
+        <input class="toggle" type="checkbox" id="smoothToggle" onclick="SMOOTH = !SMOOTH; go();" checked>
+        <input class="slider" type="range" id="mx" min="-2" max="2" step="0.01" value="0">
+        <input class="slider" type="range" id="my" min="-2" max="2" step="0.01" value="0">
+        <small class="cSmall" id="cVal">val</small>
+        <small class="zSmall" id="zVal">val</small>
+    </div>
+    <canvas id="mandelbrotCanvas"></canvas>
+    <script src="static/zoomScript.js"></script>
+    <script src="static/script.js"></script>
+</body>
+</html>
